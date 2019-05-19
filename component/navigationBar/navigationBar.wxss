@@ -1,0 +1,13 @@
+/* component/navigationBar/navigationBar.wxss */
+.navigation{
+  display:flex;
+  align-items:center;
+  padding: 10px;
+  background-color: white;
+}
+.My_cn,.popular_rcd,.QA_plaza{
+  flex: 6;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

@@ -1,0 +1,13 @@
+/**index.wxss**/
+.nav_wrap{
+
+}
+.nav{
+white-space: nowrap;
+padding: 5px,0;
+}
+.nav_item{
+  padding: 20px,45px;
+  font-size: 25.5px;
+  display: inline-block;
+}

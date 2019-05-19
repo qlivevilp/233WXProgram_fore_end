@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "UEnjoy",
+  "usingComponents":{
+    "navigationBar":"../../component/navigationBar/navigationBar"
+  }
+}
