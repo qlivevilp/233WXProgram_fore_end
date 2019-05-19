@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index1/index1",
     "pages/index/index",
     "pages/QA_plaza/QA_plaza",
     "pages/My_cn/My_cn",
@@ -14,8 +15,8 @@
   },
   "tabBar": {
     "list": [{
-      "pagePath": "pagePath",
-      "text": "text",
+      "pagePath": "pages/index/index",
+      "text": "推文主页",
       "iconPath": "iconPath",
       "selectedIconPath": "selectedIconPath"
     }]
