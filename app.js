@@ -34,6 +34,13 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    ispopular_rcd:false,
+    isMy_cn: false,
+    isQA_plaza:false,
+    nick_Name:null,
+    avatar_Url:null,
+    page_value:null,
+    search: ''
   }
 })

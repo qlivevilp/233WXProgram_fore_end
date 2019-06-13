@@ -1,4 +1,4 @@
-// TEST.js
+// pages/publish/publish.js
 Page({
 
   /**

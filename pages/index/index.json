@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "UEnjoy",
   "usingComponents":{
-    "navigationBar":"../../component/navigationBar/navigationBar"
+    "navigationBar":"../../component/navigationBar/navigationBar",
+      "dialog": "/components/Dialog/dialog",
+      "menu": "/components/Menu/menu"
   }
 }

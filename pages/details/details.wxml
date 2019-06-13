@@ -1,0 +1,56 @@
+<!--pages/details/details.wxml-->
+<view class='detailsContainer'>
+  <view class='avatar'>
+    <view class='avatar_date'>
+      <image src='http://129.204.195.157/Love/images/head.png'></image>
+    </view>
+    <view class='avatar_info'>
+      <text class='info1'>随缘随意</text>
+      <text class='avatar_time' maxlength='5'>  
+
+    发布于{{arry[2]}}</text>
+    </view>
+    <view class='line'></view>
+  </view>
+  <view class='content'>
+    <view>
+      <text decode="{{true}}" fixed='true'>
+      &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;{{arry[0]}}
+
+      </text>
+    </view>
+    <view>
+      <!-- <image src='http://129.204.195.157/Love/images/成品.png'></image> -->
+      <image src='http://129.204.195.157/Love/images/成品.png'></image>
+      <image src='http://129.204.195.157/Love/images/123.jpg'></image>
+      <image src='http://129.204.195.157/Love/images/_DSC1038.jpg'></image>
+    </view>
+  </view>
+  <view class='collection_prase_comment_container'>
+    <view class='collection_prase_comment'>
+      <image catchtap='handleCollection' wx:if='{{!iscollected}}' src='http://129.204.195.157/Love/icons/xihuan.png'></image>
+      <image catchtap='handleCollection' wx:if='{{iscollected}}' src='http://129.204.195.157/Love/icons/xihuan1.png'></image>
+      <image catchtap='handleComment' src='http://129.204.195.157/Love/icons/pinglun.png'></image>
+      <image catchtap='handleShare' src='http://129.204.195.157/Love/icons/fenxiang.png'></image>
+    </view>
+    <textarea auto-height="true" auto-focus="true" maxlength='100'></textarea>
+    <block wx:if="{{flag}}">
+      <view class="comment_cmt" wx:for="{{array}}" wx:key="{{item}}">
+        <block wx:if='{{ (item.sId===temp)?true:false}}'>
+          <text class='user'> {{item.csTime}}</text>
+          <text class="comment" auto-height="true" auto-focus="true" maxlength='100'>: {{item.csContext}} </text>
+        </block>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="comment_cmt">
+        <text decode="{{true}}" class="comment1" auto-height="true" auto-focus="true" maxlength='100'>
+         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;暂无任何评论</text>
+      </view>
+    </block>
+    <view class="comment_container" wx:if='{{iscomment}}'>
+      <textarea auto-height="true" auto-focus="true" maxlength='100' placeholder='请输入内容'></textarea>
+      <button type='submit' size='mini' bindtap='btn_submit'>发表</button>
+    </view>
+  </view>
+</view>

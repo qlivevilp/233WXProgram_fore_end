@@ -1,0 +1,14 @@
+<!--pages/publish/publish.wxml-->
+<view class="pbh" id="pbh">
+<!--
+<button calss="btn_new" id="btn_t" >新建推文</button>
+<button calss="btn_new" id="btn_q" >新建提问</button>
+<button calss="btn_new" id="btn_a" >添加好友</button>
+-->
+<view class="cerate">
+<navigator url='../create_publishing/create_publishing' open-type='navigate'>新建图文</navigator>
+</view>
+<view class="add">
+<navigator>添加好友</navigator>
+</view>
+</view>

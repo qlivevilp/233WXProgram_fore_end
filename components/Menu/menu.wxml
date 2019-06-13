@@ -1,0 +1,12 @@
+
+<view class="drawer_screen" bindtap="showOrHide" wx:if="{{isShow}}" catchtouchmove="myCatchTouch"></view>
+
+<view >
+  <image src="../../icons/tianjia.png" class="img-plus-style" animation="{{animMain}}" bindtap="showOrHide"></image>
+  <image src="../../icons/fabiao.png" class="img-plus-style" animation="{{animDelLots}}" 
+bindtap="create"></image>
+  <image src="../../icons/tianjiahaoyou.png" class="img-style" animation="{{animAdd}}" bindtap="add"></image>
+
+</view>
+
+

@@ -1,0 +1,144 @@
+/* pages/details/details.wxss */
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.avatar{
+  display: flex;
+  flex-direction: row;
+}
+.avatar_info{
+  position: absolute;
+  left: 30%;
+  margin-top: 100rpx;
+}
+.info1{
+ font-size: 36rpx;
+}
+.avatar_date {
+  /* padding: 10rpx;
+  width: 900rpx; */
+  overflow: hidden;
+  overflow-x: 100rpx;
+  display: flex;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-left: 10rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.avatar_time{
+  left: 30%;
+  position: absolute;
+  width: 400rpx;
+  font-size: 28rpx;
+  color: rgb(83, 83, 83);
+}
+.avatar_date image {
+  /* margin-top: 100rpx; */
+  width: 100%;
+  height:100%;
+  vertical-align: middle;
+}
+
+.avatar_date text {
+  font-size: 28rpx;
+  margin-left: 10rpx;
+    width: 749rpx;
+}
+
+.content {
+  font-size: 32rpx;
+  text-indent: 32rpx;
+  float: left;
+  margin-left: 10rpx;
+}
+
+.content text {
+  width: 750rpx;
+  border-style: solid;
+  border-width: 1rpx;
+  border-color:white;
+  height: 100%;
+  font-size: 36rpx;
+  color: rgb(54, 54, 54);
+  /* overflow-y:hidden;
+  word-break:break-all;
+  word-wrap:break-word; */
+}
+
+.content image {
+  width: 210rpx;
+  height: 210rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.collection_prase_comment {
+  float: right;
+  margin-right: 50rpx;
+}
+
+.collection_prase_comment image {
+  width: 80rpx;
+  height: 60rpx;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}
+
+.comment_container {
+  float: right;
+  padding: 10rpx;
+}
+
+.comment_container textarea {
+  padding: 10rpx;
+  margin-right: 10rpx;
+  font-size: 36rpx;
+  width: 730rpx;
+  border-style: solid;
+  border-width: 1rpx;
+  border-color: rgb(182, 180, 180);
+}
+
+.comment_container button {
+  margin-left: 620rpx;
+  margin-top: 10rpx;
+}
+
+.comment_cmt {
+  overflow: hidden;
+  float: left;
+}
+
+.comment_cmt text{
+  padding: 10rpx;
+  width: 749rpx;
+  font-size: 34rpx;
+  word-break: break-all;
+}
+
+.line{
+  width: 90%;
+  height: 0.5rpx;
+  background: #eee;
+  position: absolute;
+  top:259rpx;
+  left: 2%;
+}
+.user{
+  color: rgb(87, 162, 233);
+}
+.comment{
+      color: rgb(75, 75, 75);
+}
+.comment1{
+   margin-top:10px;
+  /* position: absolute; */
+  margin-left: 40%;
+  color: rgb(75, 75, 75);
+}

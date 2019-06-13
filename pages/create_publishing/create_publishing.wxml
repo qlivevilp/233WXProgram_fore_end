@@ -1,0 +1,38 @@
+<!--pages/create_publishing/create_publishing.wxml-->
+<view class="templet">
+  <form bindsubmit='submit'>
+    <view class="contents">
+      标题：
+      <input formType='reset' bindinput='input_title' class='box_boder' maxlength='30' placeholder='请输入推文标题 长度不超过30个字' value='{{input_value}}'></input>
+    </view>
+    <view>
+      类型:
+      <input formType='reset' bindinput='input_type' class='box_boder' maxlength='10' placeholder='如：旅游 阅读 美食等 长度不超过10个字' value='{{input_value}}'></input>
+    </view>
+    <view>
+      摘要：
+      <textarea formType='reset' bindinput='input_content' class='box' auto-height="true" auto-focus="true" placeholder='请输入内容     长度不超过300个字' value='{{input_value}}'></textarea>
+    </view>
+    <view>
+      <view class="container">
+        <view class='images_upload'>
+          <button  bindtap="gotoShow" class='add_images'>添加图片</button>
+        </view>
+        <view wx:if='{{isupload}}'>
+          <image class="show-image" mode="aspectFitf" src="{{src[0]}}"></image>
+          <image class="show-image" mode="aspectFitf" src="{{src[1]}}"></image>
+          <image class="show-image" mode="aspectFitf" src="{{src[2]}}"></image>
+          <image class="show-image" mode="aspectFitf" src="{{src[3]}}"></image>
+          <image class="show-image" mode="aspectFitf" src="{{src[4]}}"></image>
+          <image class="show-image" mode="aspectFitf" src="{{src[5]}}"></image>
+          <image class="show-image" mode="aspectFitf" src="{{src[6]}}"></image>
+          <image class="show-image" mode="aspectFitf" src="{{src[7]}}"></image>
+          <image class="show-image" mode="aspectFitf" src="{{src[8]}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="submit_btn">
+      <button bindtap='but_submit' type='submit' class='btn_submit'>发表推文</button>
+    </view>
+  </form>
+</view>

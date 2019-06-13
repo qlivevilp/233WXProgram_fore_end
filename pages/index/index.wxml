@@ -1,4 +1,130 @@
-<view class="main">
-<!-- 首页导航 -->
-<navigationBar></navigationBar>
+<view class='total'>
+
+  <!--获取授权-->
+  <view wx:if="{{isHide}}">
+
+    <view wx:if="{{canIUse}}">
+
+      <view class='header'>
+
+        <image src='../../images/wx_login.png'></image>
+
+      </view>
+      <view class='content'>
+
+        <view>申请获取以下权限</view>
+
+        <text>获得你的公开信息(昵称，头像等)</text>
+
+      </view>
+
+      <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+
+    </view>
+    <view wx:else>请升级微信版本</view>
+  </view>
+  <view wx:else>
+  <!--弹出式按钮-->
+  <menu hidden id='menu' bind:addEvent="_addEvent" bind:deleteLotsEvent="_deleteLotsEvent" />
+    <view class="main">
+      <!--搜索框-->
+
+      <view class='page_row' bindtap="suo">
+
+        <view class="search">
+
+          <view class="df search_arr">
+
+            <icon class="searchcion" size='20' type='search'></icon>
+
+            <input class="" disabled placeholder="请输入关键字" value="{{searchValue}}" />
+
+          </view>
+
+        </view>
+
+        <view class='sousuo'>搜索</view>
+
+      </view>
+
+      <!-- 首页导航 -->
+      <navigationBar></navigationBar>
+      <view class="Recommendation_Concern_Question" bindlongtap='getGlobal_variable_value'>
+        <!--推荐列表-->
+        <block wx:if="{{!recommend}}">
+          <view class="Recommendation_wrap" wx:for='{{recommendationList}}' wx:key='{{item}}'>
+            <view catchtap='toDtails' data-index='{{item}}'>
+              <view class="Recommendation_item">
+                <!-- 分类标签 -->
+                <view claas="item_label">
+                  <view class="Recommendation_label">
+                    <image src='http://129.204.195.157/Love/icons/label.png'></image>
+                  </view>
+                  <view class='content_label'>
+                    <text class='title_txt' decode="{{true}}">{{item.sTag}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.sTitle}}</text>
+                  </view>
+                  <view class='content'>
+                    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.sContext}}</text>
+                  </view>
+                </view>
+                <!--转发 收藏 评论-->
+                <view class="Recommendation_EPC">
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+        <!--我的关注列表-->
+        <block wx:elif="{{concern}}">
+          <view class="Concern_wrap" wx:for='{{concernList}}' wx:key='{{item}}'>
+            <view catchtap='toDtails' data-index='{{item}}'>
+              <view class="Recommendation_item">
+                <!-- 分类标签 -->
+                <view claas="item_label">
+                  <view class="Recommendation_label">
+                    <image src='http://129.204.195.157/Love/icons/label.png'></image>
+                  </view>
+                  <view class='content_label'>
+                    <text class='title_txt' decode="{{true}}">{{item.sTag}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.sTitle}}</text>
+                  </view>
+                  <view class='content'>
+                    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.sContext}}</text>
+                  </view>
+                </view>
+                <!--转发 收藏 评论-->
+                <view class="Recommendation_EPC">
+ 
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+        <!--问答列表-->
+        <block wx:else="{{quetion}}">
+          <view class="Question_wrap" wx:for='{{questionAndanswerList}}' wx:key='{{item}}'>
+            <view catchtap='toDtails_q' data-index='{{item}}'>
+              <view class="Recommendation_item">
+                <!-- 分类标签 -->
+                <view claas="item_label">
+                  <view class="Recommendation_label">
+                    <image src='http://129.204.195.157/Love/icons/label.png'></image>
+                  </view>
+                  <view class='content_label'>
+                    <text class='title_txt' decode="{{true}}">{{item.qTag}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.qTitle}}</text>
+                  </view>
+                  <view class='content'>
+                    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.qContext}}</text>
+                  </view>
+                </view>
+                <!--转发 收藏 评论-->
+                <view class="Recommendation_EPC">
+ 
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
 </view>

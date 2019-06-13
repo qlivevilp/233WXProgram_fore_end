@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarTitleText": "UEjoy",
+  "usingComponents": {
+    "navigationBar": "../../component/navigationBar/navigationBar"
+  }
+}

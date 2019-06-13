@@ -1,4 +1,11 @@
 /* component/navigationBar/navigationBar.wxss */
+ Component{
+   background-color: rgb(250, 224, 224);
+ }
+.navigation{
+    color:#2d405c; 
+    background-color: rgb(250, 224, 224);
+}
 .navigation{
   display:flex;
   align-items:center;

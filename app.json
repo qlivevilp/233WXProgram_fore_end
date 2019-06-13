@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/index1/index1",
     "pages/index/index",
-    "pages/QA_plaza/QA_plaza",
-    "pages/My_cn/My_cn",
-    "pages/Popular_rcd/Popular_rcd",
-    "pages/logs/logs"
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/details/details",
+    "pages/create_publishing/create_publishing",
+    "pages/search/search"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,13 +14,24 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "推文主页",
-      "iconPath": "iconPath",
-      "selectedIconPath": "selectedIconPath"
-    }]
+  "tabBar":{
+            "backgroundColor": "#FAE0E0",
+            "color": "#979795",
+            "selectedColor": "#1c1c1b",
+            "list": [
+              {
+                "pagePath": "pages/index/index",
+                "iconPath": "icons/zhuye.png",
+                "selectedIconPath": "icons/zhuye1.png",
+                "text": "主页"
+              },
+              {
+                "pagePath": "pages/mine/mine",
+                "iconPath": "icons/gerenzhongxin.png",
+                "selectedIconPath": "icons/gerenzhongxin1.png",
+                "text": "个人中心"
+              }
+            ]
   },
   "sitemapLocation": "sitemap.json"
 }

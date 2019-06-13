@@ -1,6 +1,7 @@
 <view class="navigation">
 <!--首页导航-->
-<navigator class="popular_rcd" url="../Popular_rcd/Popular_rcd" open-type="redirect">热门推荐</navigator>
-<navigator class="My_cn" url="../My_cn/My_cn" open-type="redirect">我的关注</navigator>
-<navigator class="QA_plaza" url="../QA_plaza/QA_plaza" open-type="redirect">问答广场</navigator>
+<navigator class="popular_rcd" url="../../pages/index/index" open-type="switchTab" bindtap='ispopular_rcd'>热门推荐</navigator>
+<navigator class="My_cn" url="../index/index" open-type="switchTab" bindtap='isMy_cn'>我的关注</navigator>
+<navigator class="QA_plaza" url="../index/index" open-type="switchTab" bindtap='isQA_plaza'>问答广场
+</navigator>
 </view>
